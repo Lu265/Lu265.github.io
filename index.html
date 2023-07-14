@@ -149,74 +149,6 @@
     
     
     <article
-  id="post-ESDPSO"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/07/14/ESDPSO/" class="article-date">
-  <time datetime="2023-07-14T10:06:29.266Z" itemprop="datePublished">2023-07-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <hr>
-<h2 id="title-PSO学习（2）date-2023-7-14tags-学习"><a href="#title-PSO学习（2）date-2023-7-14tags-学习" class="headerlink" title="title:PSO学习（2）date :2023&#x2F;7&#x2F;14tags :学习"></a>title:PSO学习（2）<br>date :2023&#x2F;7&#x2F;14<br>tags :学习</h2><h1 id="PSO的学习（２）"><a href="#PSO的学习（２）" class="headerlink" title="PSO的学习（２）"></a>PSO的学习（２）</h1><p>参考文章《<strong>Evolutionary-state-driven Multi-swarm Cooperation Particle Swarm</strong> <strong>Optimization for Complex Optimization Problem</strong>》</p>
-<h2 id="ESD-PSO的学习"><a href="#ESD-PSO的学习" class="headerlink" title="ESD-PSO的学习"></a>ESD-PSO的学习</h2><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>ESD-PSO是基于PSO的一种变种算法，虽然PSO有很多优点，可以解决很多问题，但是PSO存在收敛过早、全局搜索能力差的缺点。为了解决这些问题，提出了进化状态驱动的多群协同粒子群优化方法（ESD-PSO），采用自适应多群协同机制（AMC）来提高所有子群之间的信息交换效率，在AMC中，将种群随机划分为多个相等的子群，并利用子群中的最佳粒子来评估其进化状态。当停滞子群达到一个阈值的时候，所有子群都会自适应地重新分组。此外，如果有一个子群长期停滞并且没有达到重组条件，则触发停滞补偿机制（SCS）来增强停滞种群多样性。生成的补偿样本帮助子群再次寻找有希望的区域。采用竞争干扰机制（CDM）来提高求解的精度。</p>
-<h4 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h4><ul>
-<li><p><strong>自适应多群合作机制（AMC机制）</strong></p>
-</li>
-<li><p><strong>停滞补偿策略（SCS）</strong></p>
-</li>
-<li><p><strong>竞争干扰机制（CDM）</strong></p>
-</li>
-</ul>
-<h5 id="AMC-机制"><a href="#AMC-机制" class="headerlink" title="AMC 机制"></a>AMC 机制</h5><p>在AMC中，种群被分成多个相等的亚群。亚蜂群之间的信息交换是至关重要的，因为它控制着进化的方向。然而，在进化过程中，亚群之间的信息交换过多或太少是不合适的。更多的信息交换可能会导致所有的子群过早收敛，而较少的信息交换可能会降低算法效率。在进化过程中，利用每个子群的最佳粒子来评价其进化状态。当停滞的子群的数量达到一个阈值时，它们就会被重新分组，而非停滞的子群则保持不变。AMC提高了子蜂群间的信息交换效率。</p>
-<h6 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h6><p>在最初的进化过程中，种群被随机分裂成相等的亚群，在进化过程中可以自适应地重新分组。每个子群中的最佳粒子lbestj代表第j个子群中的最佳适应度粒子。下标j表示第j个子群（j&#x3D;1-M，其中M代表子群的数量），第j个子群中的所有粒子都使用lbestj来更新其速度。具体来说，第j个子群中的第i个粒子根据其个人历史最佳解（pbesti，j）和lbestj更新其速度，如等式所示 (3).式中为第j个子群中第i个粒子的速度𝑉𝑑𝑖，𝑗，表示第i个粒子𝑋𝑑𝑖，𝑗在第j个子群中的位置。</p>
-<h6 id="算法公式"><a href="#算法公式" class="headerlink" title="算法公式"></a>算法公式<img src="D:\MyBlog\themes\ayer\source\picture\001a9ff2c3ff258923389ddec210e66.png" alt="001a9ff2c3ff258923389ddec210e66"></h6><p>其中的V代表的是速度，X代表的是位置。</p>
-<p><img src="D:\MyBlog\themes\ayer\source\picture\462d9a9ffb4f76abf97d00f0cfccf60.png" alt="462d9a9ffb4f76abf97d00f0cfccf60"></p>
-<p>其中lbestj(t)的变化值𝛿lbestj(t)可以用来评估进化状态。</p>
-<p><strong>情况1:𝛿lbestj&#x3D;0</strong></p>
-<p>第j代子群的最优解在第t代中没有得到𝛿𝑙𝑏𝑒𝑠𝑡𝑗的改进。虽然在这个子群中某些粒子的适应度可以得到提高，但我们只使用最佳解进行评价。如果这种情况继续下去，子群中的所有粒子都将接近局部最优，其多样性将会减少。为了防止这种现象，当lbestj无法更新时，初始值为0的停滞因子η累积为1。当η超过预设的阈值K（下面讨论）时，子群可以被评估为停滞。</p>
-<p><strong>情况2：𝛿lbestj&lt;0</strong></p>
-<p>在t代中改进了第j个子群的最优解，从而找到了一个很有前途的区域；因此，<strong>η被重置为0</strong>。在每一代中，计算所有停滞子群的数量m，并与所有子群的数量m进行比较。<strong>如果m与M的比例小于一个固定的阈值S，则大多数子群可以不断改进其最优解；</strong>因此，它们保持不变。如果这个比例超过S，则根据所有亚群的进化状态执行自适应重组策略。在这种情况下，所有停滞的亚群都被重新分组，因为它们的粒子不能根据它们的信息跳出局部最优，而其他的亚群保持不变，继续搜索有希望的区域。下面将讨论S的设置。自适应多群合作机制示意图如图所示。</p>
-<p><img src="D:\MyBlog\themes\ayer\source\picture\2d82f1c0c6b5f22e8e78594e54f9a6e.png" alt="2d82f1c0c6b5f22e8e78594e54f9a6e"></p>
-<h5 id="SCS机制"><a href="#SCS机制" class="headerlink" title="SCS机制"></a>SCS机制</h5><p>由上可知，如果m&#x2F;M大于S，我们将根据所有亚群的进化状态对其进行适应性重组。然而，当整个种群没有达到重组条件时，一些亚群可能会保持很长一段时间的停滞，它们的粒子在重组之前无法跳出局部最优，这浪费了计算资源。</p>
-<p>因此，当整个种群尚未达到重组条件时，一个停滞因子η大于K的亚群触发SCS，这有助于它再次寻找有希望的区域。SCS为停滞的子群构建新的学习样本，称为补偿样本，以获得更多的多样性和精英信息，并基于种群中所有粒子的优秀历史信息进行构建。</p>
-<h6 id="算法原理-1"><a href="#算法原理-1" class="headerlink" title="算法原理"></a>算法原理</h6><p>在每一代中，所有粒子的个人历史最佳解决方案（pbest）都存储在精英池E中，在每个维度中随机选择两个粒子，生成一个活力粒子e.<img src="D:\MyBlog\themes\ayer\source\picture\6b557657baf5360f8efe13531b9b6ec.png" alt="6b557657baf5360f8efe13531b9b6ec"></p>
-<p>其中E在每一代都有更新，r1和r2是区间中的随机整数[1，N].F是一个尺度因子，控制着从gbest学习的补偿样本的程度。我们可以发现，补偿样本是由gbest和精英粒子构成的。然而，在为一个停滞的子群构建补偿样本时，从精英池中随机选择的粒子可能就在该子群中。在这种情况下，停滞的子群中的信息可以被充分挖掘</p>
-<p>。</p>
-<p>…(后面有些不明白)</p>
-<h5 id="CDM机制"><a href="#CDM机制" class="headerlink" title="CDM机制"></a>CDM机制</h5><p>在搜索过程中，gbest对所有粒子都有主导地位，如果它是在局部最优中，整个种群将不可避免地落入其中，导致过早的趋同。CDM帮助gbest跳出局部最优。所有粒子的历史最佳信息的平均值被定义为</p>
-<p><img src="D:\MyBlog\themes\ayer\source\picture\41ff577e9ca723769f6edcb2703b848.png" alt="41ff577e9ca723769f6edcb2703b848"></p>
-<p>通过CDM，获得的突变位置如图等式所示 (10).其中r是在区间[0,1]中均匀分布的随机数。在CDM中，所有关于整个种群的历史优秀信息都被用来寻找一个有前途的区域。</p>
-<p><img src="D:\MyBlog\themes\ayer\source\picture\86eb45b834bf474037c9152353b0cbe.png" alt="86eb45b834bf474037c9152353b0cbe"></p>
-<p>进行选择操作，比较Nbest和gbest的适合度值，选择适合度较好的位置作为全局最优解。为了保存计算资源，CDM不能工作，直到经过10次连续迭代后gbest没有刷新</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
   id="post-7.14随笔"
   class="article article-type-post"
   itemscope
@@ -320,6 +252,86 @@
 <li><p>未达到结束条件则转到第二步。</p>
 </li>
 </ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-ESDPSO"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/14/ESDPSO/"
+    >PSO学习（2）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/14/ESDPSO/" class="article-date">
+  <time datetime="2023-07-13T16:00:00.000Z" itemprop="datePublished">2023-07-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="PSO的学习（２）"><a href="#PSO的学习（２）" class="headerlink" title="PSO的学习（２）"></a>PSO的学习（２）</h1><p>参考文章《<strong>Evolutionary-state-driven Multi-swarm Cooperation Particle Swarm</strong> <strong>Optimization for Complex Optimization Problem</strong>》</p>
+<h2 id="ESD-PSO的学习"><a href="#ESD-PSO的学习" class="headerlink" title="ESD-PSO的学习"></a>ESD-PSO的学习</h2><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>ESD-PSO是基于PSO的一种变种算法，虽然PSO有很多优点，可以解决很多问题，但是PSO存在收敛过早、全局搜索能力差的缺点。为了解决这些问题，提出了进化状态驱动的多群协同粒子群优化方法（ESD-PSO），采用自适应多群协同机制（AMC）来提高所有子群之间的信息交换效率，在AMC中，将种群随机划分为多个相等的子群，并利用子群中的最佳粒子来评估其进化状态。当停滞子群达到一个阈值的时候，所有子群都会自适应地重新分组。此外，如果有一个子群长期停滞并且没有达到重组条件，则触发停滞补偿机制（SCS）来增强停滞种群多样性。生成的补偿样本帮助子群再次寻找有希望的区域。采用竞争干扰机制（CDM）来提高求解的精度。</p>
+<h4 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h4><ul>
+<li><p><strong>自适应多群合作机制（AMC机制）</strong></p>
+</li>
+<li><p><strong>停滞补偿策略（SCS）</strong></p>
+</li>
+<li><p><strong>竞争干扰机制（CDM）</strong></p>
+</li>
+</ul>
+<h5 id="AMC-机制"><a href="#AMC-机制" class="headerlink" title="AMC 机制"></a>AMC 机制</h5><p>在AMC中，种群被分成多个相等的亚群。亚蜂群之间的信息交换是至关重要的，因为它控制着进化的方向。然而，在进化过程中，亚群之间的信息交换过多或太少是不合适的。更多的信息交换可能会导致所有的子群过早收敛，而较少的信息交换可能会降低算法效率。在进化过程中，利用每个子群的最佳粒子来评价其进化状态。当停滞的子群的数量达到一个阈值时，它们就会被重新分组，而非停滞的子群则保持不变。AMC提高了子蜂群间的信息交换效率。</p>
+<h6 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h6><p>在最初的进化过程中，种群被随机分裂成相等的亚群，在进化过程中可以自适应地重新分组。每个子群中的最佳粒子lbestj代表第j个子群中的最佳适应度粒子。下标j表示第j个子群（j&#x3D;1-M，其中M代表子群的数量），第j个子群中的所有粒子都使用lbestj来更新其速度。具体来说，第j个子群中的第i个粒子根据其个人历史最佳解（pbesti，j）和lbestj更新其速度，如等式所示 (3).式中为第j个子群中第i个粒子的速度𝑉𝑑𝑖，𝑗，表示第i个粒子𝑋𝑑𝑖，𝑗在第j个子群中的位置。</p>
+<h6 id="算法公式"><a href="#算法公式" class="headerlink" title="算法公式"></a>算法公式<img src="D:\MyBlog\themes\ayer\source\picture\001a9ff2c3ff258923389ddec210e66.png" alt="001a9ff2c3ff258923389ddec210e66"></h6><p>其中的V代表的是速度，X代表的是位置。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\462d9a9ffb4f76abf97d00f0cfccf60.png" alt="462d9a9ffb4f76abf97d00f0cfccf60"></p>
+<p>其中lbestj(t)的变化值𝛿lbestj(t)可以用来评估进化状态。</p>
+<p><strong>情况1:𝛿lbestj&#x3D;0</strong></p>
+<p>第j代子群的最优解在第t代中没有得到𝛿𝑙𝑏𝑒𝑠𝑡𝑗的改进。虽然在这个子群中某些粒子的适应度可以得到提高，但我们只使用最佳解进行评价。如果这种情况继续下去，子群中的所有粒子都将接近局部最优，其多样性将会减少。为了防止这种现象，当lbestj无法更新时，初始值为0的停滞因子η累积为1。当η超过预设的阈值K（下面讨论）时，子群可以被评估为停滞。</p>
+<p><strong>情况2：𝛿lbestj&lt;0</strong></p>
+<p>在t代中改进了第j个子群的最优解，从而找到了一个很有前途的区域；因此，<strong>η被重置为0</strong>。在每一代中，计算所有停滞子群的数量m，并与所有子群的数量m进行比较。<strong>如果m与M的比例小于一个固定的阈值S，则大多数子群可以不断改进其最优解；</strong>因此，它们保持不变。如果这个比例超过S，则根据所有亚群的进化状态执行自适应重组策略。在这种情况下，所有停滞的亚群都被重新分组，因为它们的粒子不能根据它们的信息跳出局部最优，而其他的亚群保持不变，继续搜索有希望的区域。下面将讨论S的设置。自适应多群合作机制示意图如图所示。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\2d82f1c0c6b5f22e8e78594e54f9a6e.png" alt="2d82f1c0c6b5f22e8e78594e54f9a6e"></p>
+<h5 id="SCS机制"><a href="#SCS机制" class="headerlink" title="SCS机制"></a>SCS机制</h5><p>由上可知，如果m&#x2F;M大于S，我们将根据所有亚群的进化状态对其进行适应性重组。然而，当整个种群没有达到重组条件时，一些亚群可能会保持很长一段时间的停滞，它们的粒子在重组之前无法跳出局部最优，这浪费了计算资源。</p>
+<p>因此，当整个种群尚未达到重组条件时，一个停滞因子η大于K的亚群触发SCS，这有助于它再次寻找有希望的区域。SCS为停滞的子群构建新的学习样本，称为补偿样本，以获得更多的多样性和精英信息，并基于种群中所有粒子的优秀历史信息进行构建。</p>
+<h6 id="算法原理-1"><a href="#算法原理-1" class="headerlink" title="算法原理"></a>算法原理</h6><p>在每一代中，所有粒子的个人历史最佳解决方案（pbest）都存储在精英池E中，在每个维度中随机选择两个粒子，生成一个活力粒子e.<img src="D:\MyBlog\themes\ayer\source\picture\6b557657baf5360f8efe13531b9b6ec.png" alt="6b557657baf5360f8efe13531b9b6ec"></p>
+<p>其中E在每一代都有更新，r1和r2是区间中的随机整数[1，N].F是一个尺度因子，控制着从gbest学习的补偿样本的程度。我们可以发现，补偿样本是由gbest和精英粒子构成的。然而，在为一个停滞的子群构建补偿样本时，从精英池中随机选择的粒子可能就在该子群中。在这种情况下，停滞的子群中的信息可以被充分挖掘</p>
+<p>。</p>
+<p>…(后面有些不明白)</p>
+<h5 id="CDM机制"><a href="#CDM机制" class="headerlink" title="CDM机制"></a>CDM机制</h5><p>在搜索过程中，gbest对所有粒子都有主导地位，如果它是在局部最优中，整个种群将不可避免地落入其中，导致过早的趋同。CDM帮助gbest跳出局部最优。所有粒子的历史最佳信息的平均值被定义为</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\41ff577e9ca723769f6edcb2703b848.png" alt="41ff577e9ca723769f6edcb2703b848"></p>
+<p>通过CDM，获得的突变位置如图等式所示 (10).其中r是在区间[0,1]中均匀分布的随机数。在CDM中，所有关于整个种群的历史优秀信息都被用来寻找一个有前途的区域。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\86eb45b834bf474037c9152353b0cbe.png" alt="86eb45b834bf474037c9152353b0cbe"></p>
+<p>进行选择操作，比较Nbest和gbest的适合度值，选择适合度较好的位置作为全局最优解。为了保存计算资源，CDM不能工作，直到经过10次连续迭代后gbest没有刷新</p>
  
       <!-- reward -->
       
