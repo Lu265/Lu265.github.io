@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>PSO概述 |  小陆的半亩方塘</title>
+      <title>一些idea |  小陆的半亩方塘</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  PSO概述
+  一些idea
 </h1>
  
 
@@ -72,15 +72,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/07/14/PSO%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/" class="article-date">
-  <time datetime="2023-07-13T16:00:00.000Z" itemprop="datePublished">2023-07-14</time>
+      <a href="/2023/07/19/PSO%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/" class="article-date">
+  <time datetime="2023-07-18T16:00:00.000Z" itemprop="datePublished">2023-07-19</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1k</span>
+            <span class="post-count">546</span>
         </span>
     </span>
 
@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -104,31 +104,9 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="PSO算法的学习笔记（1）"><a href="#PSO算法的学习笔记（1）" class="headerlink" title="PSO算法的学习笔记（1）"></a>PSO算法的学习笔记（1）</h1><p>创建这个博客的初衷是做一个学习记录，主要目的是给自己以后看，这是我的第一篇<strong>技术</strong>博客。</p>
-<h2 id="粒子群优化算法（PSO）"><a href="#粒子群优化算法（PSO）" class="headerlink" title="粒子群优化算法（PSO）"></a>粒子群优化算法（PSO）</h2><p>粒子群优化算法（PSO）是一种进化计算技术，源于对鸟群捕食行为的研究。该算法最初是受到飞鸟集群活动的规律性启发，进而利用群体智能建立的一个简化模型。粒子群算法在对动物及群活动行为观察的基础上，利用群体中的个体对信息的共享使整个群体的运动在问题求解空间中产生从无序到有序的演化过程，从而获得最优解。</p>
-<p>通俗点来说，<strong>PSO</strong>模拟的是鸟群的捕食行为。设想场景：一群鸟在随机搜索食物。在这个区域里只有一块食物。所有鸟都不知道食物在哪里。但是他们知道当前的位置距离食物还有多远。那么找到食物的最优策略是什么？最简单有效的就是搜寻目前离食物最近的鸟的周围区域。鸟类的搜索方向会偏向于自己曾经寻找到的食物的位置，以及历史上群体中的鸟发现的食物的位置的影响。</p>
-<p>鸟群在整个搜寻过程中，通过相互传递各自的信息，让其他鸟知道自己当前的位置，通过这样的协作来判断自己找到的是不是最优解，同时也将最优解的信息传递给整个鸟群，最终整个鸟群都能聚集在食物源的周围，即找到了<strong>最优解</strong>。</p>
-<p>PSO中，每个优化问题的解都是搜索空间的一只鸟，我们称之为“粒子”。所有的粒子都有一个被优化的函数决定的<strong>适应值</strong>，每个粒子还有一个速度决定他们飞翔的方向和距离。然后粒子们就追随当前的最优粒子在解空间中搜索。</p>
-<h2 id="粒子抽象"><a href="#粒子抽象" class="headerlink" title="粒子抽象"></a>粒子抽象</h2><p><strong>关于速度和位置</strong></p>
-<p>粒子群算法统领给设计一种无质量的粒子来模拟鸟群中的鸟，粒子仅有两个属性：速度和位置，速度代表移动的快慢，粒子代表移动的方向。</p>
-<p>鸟被抽象为没有质量和体积的微粒（点），并延伸到N维空间，粒子i在N维空间的位置表示为矢量Xi &#x3D; （x1，x2，…，xn），飞行速度表示为矢量Vi&#x3D;（v1，v2，…，vn）。每个粒子都有一个由目标函数决定的适应值，并且知道自己到目前为止发现的最好位置（pbest）和现在的位置Xi。这个可以看作是粒子自己的飞行经验。除此之外，每个粒子还知道到目前为止整个群体中所有粒子发现的最好的位置（gbest），这个可以看作是粒子同伴的经验。粒子就是通过自己的经验和同伴中最好的经验来决定下一步运动。</p>
-<p><strong>速度和位置的更新</strong></p>
-<p>PSO初始化为一群随机粒子（随机解）。然后通过迭代找到最优解。在每一次迭代中，粒子通过跟踪两个“极值（pbest和gbest）”来更新自己。在找到这两个最优值后，粒子通过下面的公式来更新自己的速度和位置。</p>
-<p>![aa30c33528def8ec601fe4c2d6286cd](C:\Users\L\AppData\Local\Temp\WeChat Files\aa30c33528def8ec601fe4c2d6286cd.jpg)</p>
-<h2 id="标准PSO算法流程"><a href="#标准PSO算法流程" class="headerlink" title="标准PSO算法流程"></a>标准PSO算法流程</h2><ol>
-<li><p>初始化一群微粒（群体规模为N），包括随机位置和速度；</p>
-</li>
-<li><p>评价每个微粒的适应度；</p>
-</li>
-<li><p>对每个微粒，将其适应值与其经过的最好位置pbest作比较，如果较好，则将其作为当前的最好位置pbest；</p>
-</li>
-<li><p>对每个微粒，将其适应值与其经过的最好位置gbest作比较，如果较好，则将其作为当前的最好位置gbest；</p>
-</li>
-<li><p>根据公式（2）、（3）调整微粒的速度和位置；</p>
-</li>
-<li><p>未达到结束条件则转到第二步。</p>
-</li>
-</ol>
+  <h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>吃饭的时候聊我前几天看的那篇文章。文章创新点大致就是多群协作，取停滞的种群进行重组，然后再用优秀的粒子指导种群，防止种群陷入停滞。zwt说这篇文章提出了三个创新点，相对来说比较完善了，不好在上面改。然后我由这个结构突然想到了古代的封建制度，不就是一层一层的阶级制度，顶头的帝王相当于一个最优秀的粒子，可以号令群雄，也就是指导下面的粒子。底下的平民百姓，也就是进化的相对差一点的粒子，通过学习优秀粒子，达到阶级跃升，达到更好的阶层。相当于平民百姓通过读书实现阶级跃升。我把想法提出来，zwt说他读到过类似的文章，差不多是这个意思。好像是LLPSO差不多就是这个思想。</p>
+<p>然后由此我的脑洞彻底打开。我最近玩那个种田的文明游戏，里面可以攻陷别人的城池。受此启发，我又想到了一种模型。同样是粒子群，两两竞争，优秀的粒子群把差劲的粒子群吞并掉，弱肉强食，取两方最优秀的粒子来指导种群，让种群往更好的方向发展。竞争出的种群再两两竞争，相互吞并。直到养出一个最优秀的种群。但是这样又有一些问题。种群规模不断变大的话会导致计算资源消耗巨大。我又脑洞大开，打仗免不了死伤，双方打仗，肯定会有人口损失。同理，应用到粒子群算法上，两两合并时，取相对同种群进化较优的粒子，各取其半。这样的话既防止差的粒子群陷入局部最优，还保证了进化的好的粒子群的多样性，也同样节省了计算资源，一举三得。</p>
+<p>说归说，目前为止只是一个设想，还要等代码写出来看看运行情况。</p>
  
       <!-- reward -->
       
@@ -193,7 +171,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/07/14/PSO%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/07/19/PSO%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -206,19 +184,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/07/14/7.14%E9%9A%8F%E7%AC%94/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            7.14随笔
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/07/14/ESDPSO/" class="article-nav-link">
+      <a href="/2023/07/19/7.19%E9%9A%8F%E7%AC%94/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">PSO学习（2）</div>
+        <div class="article-nav-title">7.19随笔</div>
       </a>
     
   </nav>
@@ -319,6 +288,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%AF%8F%E6%97%A5%E8%87%AA%E5%BE%8B/">自律日记</a>
     </li>
     
   </ul>
