@@ -1,32 +1,169 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>长沙 | 小陆的半亩方塘</title><meta name="author" content="小陆"><meta name="copyright" content="小陆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="哎呀，今天喝了茶叶茶，睡不着了，耳机里刚好放到黄老板的shape of you，那就写一写长沙还有桂林的游记。长沙的体验感没有张家界好，至少没有吹的那么神。因为去张家界的时候绿皮火车没有想象中的那么差劲，所以从张家界去长沙的交通方式选的也是绿皮火车，时间稍微长一点，但是大学生最不缺的就是时间，便宜下来可以便宜个百来块。但是体验确实没有第一次坐绿皮火车那么好了。我到现在还是不理解的是为什么火车上要设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="长沙">
+<meta property="og:url" content="http://example.com/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/index.html">
+<meta property="og:site_name" content="小陆的半亩方塘">
+<meta property="og:description" content="哎呀，今天喝了茶叶茶，睡不着了，耳机里刚好放到黄老板的shape of you，那就写一写长沙还有桂林的游记。长沙的体验感没有张家界好，至少没有吹的那么神。因为去张家界的时候绿皮火车没有想象中的那么差劲，所以从张家界去长沙的交通方式选的也是绿皮火车，时间稍微长一点，但是大学生最不缺的就是时间，便宜下来可以便宜个百来块。但是体验确实没有第一次坐绿皮火车那么好了。我到现在还是不理解的是为什么火车上要设">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-06-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-21T04:33:03.836Z">
+<meta property="article:author" content="小陆">
+<meta property="article:tag" content="杂记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '长沙',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-07-21 12:33:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="小陆的半亩方塘"><span class="site-name">小陆的半亩方塘</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">长沙</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-30T16:00:00.000Z" title="发表于 2023-07-01 00:00:00">2023-07-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-21T04:33:03.836Z" title="更新于 2023-07-21 12:33:03">2023-07-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="长沙"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>哎呀，今天喝了茶叶茶，睡不着了，耳机里刚好放到黄老板的shape of you，那就写一写长沙还有桂林的游记。长沙的体验感没有张家界好，至少没有吹的那么神。因为去张家界的时候绿皮火车没有想象中的那么差劲，所以从张家界去长沙的交通方式选的也是绿皮火车，时间稍微长一点，但是大学生最不缺的就是时间，便宜下来可以便宜个百来块。但是体验确实没有第一次坐绿皮火车那么好了。我到现在还是不理解的是为什么火车上要设置吸烟区，还有那些烟民少抽一口会死吗。很讨厌抽烟的人，特别是在公共场合抽烟的人。我那个位置刚好在抽烟区旁边，让我抽二手烟还不如杀了我。抽了快六个小时的二手烟？（具体时间有点忘记了，反正挺久），终于下车了，在凌晨一点钟到了长沙。说实话下火车以后让我感到了这座城市深深的恶意。只因为我们是外地人，只因为看上去是个大学生，司机就可以狮子大开口。我实在是想不通三公里的出租车要收三十块，而且是外面的统一价，所有人都说是三十块钱。我和pyc实在受不了这样的愚弄，叫了一辆网约车。差不多十来块吧，司机师傅告诉我们晚上那些拉客的出租车连表都不打，收费是高一点，他不想像他们那样，就直接走平台拉单子。本来是打算在网吧糊弄一晚上，毕竟到的时候都凌晨一点了。pyc后面又说住个酒店好了。到酒店洗了个澡就差不多睡了。</p>
+<p>第二天才是真的折磨。去了橘子洲头，见了青年时期的毛爷爷。是真的很热。总共三公里的路，四十度的高温，走三公里，是真的很折磨。本来以为走个一两公里就可以看到。万万没想到的是它那个景区设计是便便形状的，一整条，必须要走到底才可以见到毛爷爷。pyc一路上都叫苦不迭，鉴于一些特殊原因，我俩不想让这个景区赚一分钱。所以没坐那个车。具体什么原因想不起来了。哦哦，是长沙不喜欢在公共场合开空调！很离谱，真的很离谱。四十度的高温，连高铁站都不开空调，只愿意放一些大冰块。我寻思隔壁的张家界也能开，为什么在公共场合开空调这么难呢。然后那个车不愿意坐大抵是前面有张家界做对比，那个橘子洲头景区不收费，但是那个观光车要收费，价格学生票大概二十块好像，但是咱俩当时就是不想让这个空调舍不得开，专宰外地人的城市挣钱。哈哈，现在想想还挺好笑的。pyc走了一路抱怨了一路，后面我说今天晚上的KFC我请客，才消停一点。一个便便走到头三公里，走回来又是三公里，总共六公里，四十度的高温，实在是有些折磨。后面真的只看了一眼毛爷爷，拍了一张照片就走了。哦哦，突然想起来一个小插曲，挺有意思。因为我的短袖都在学校，导致我家里没啥短袖可以带的。那天穿的是高中时的校服，pyc说我嫩起来了，哈哈哈。</p>
+<p>物价也没有这么透明，第一天去的小吃街就有点刺客。一小盒无骨鸡爪要了我四十大洋，还有那个章鱼小丸子也差不多三十好几，有些店甚至没有明码标价。导致在长沙的几餐饭吃的是KFC，那两天KFC搞活动，一个全家桶五十，很赚。还是有点小遗憾，没有吃到长沙的臭豆腐。</p>
+<p>唯一让我对长沙稍微印象好一点的就是茶颜悦色。之前一直觉得吹的再牛不过也是奶茶罢了，能有多好喝。挖草，第一口喝下去，飘飘欲仙，整个人好像飘起来了。如果人间有仙酿，那一定是茶颜悦色。买之前那个工作人员有一小杯的试喝。那一口下去，在我心中直接封神，什么古茗什么奈雪什么喜茶还有什么一点点什么茶百道，统统逊色了不止一点两点。两天一共喝了两杯，每一杯都很好喝。可是他还有好多我没有尝试，如果还有下次的长沙行，那我一定是为了茶颜悦色！！！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">小陆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/">http://example.com/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">小陆的半亩方塘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9D%82%E8%AE%B0/">杂记</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/02/7.2%E9%9A%8F%E8%AE%B0/" title="7.2随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">7.2随笔</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/30/%E5%BC%A0%E5%AE%B6%E7%95%8C%E6%B8%B8%E8%AE%B0/" title="张家界"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">张家界</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/02/7.2%E9%9A%8F%E8%AE%B0/" title="7.2随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-02</div><div class="title">7.2随笔</div></div></a></div><div><a href="/2023/06/30/%E5%BC%A0%E5%AE%B6%E7%95%8C%E6%B8%B8%E8%AE%B0/" title="张家界"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-30</div><div class="title">张家界</div></div></a></div><div><a href="/2023/06/29/6.29%E9%9A%8F%E8%AE%B0%20/" title="6.29随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-29</div><div class="title">6.29随笔</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小陆</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/24/7.24%E9%9A%8F%E7%AC%94/" title="7.24随笔">7.24随笔</a><time datetime="2023-07-23T16:00:00.000Z" title="发表于 2023-07-24 00:00:00">2023-07-24</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/23/7.23%E9%9A%8F%E7%AC%94/" title="7.23随笔">7.23随笔</a><time datetime="2023-07-22T16:00:00.000Z" title="发表于 2023-07-23 00:00:00">2023-07-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/22/7.22%E9%9A%8F%E7%AC%94/" title="7.22随笔">7.22随笔</a><time datetime="2023-07-21T16:00:00.000Z" title="发表于 2023-07-22 00:00:00">2023-07-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/%E5%85%AC%E5%91%8A/" title="公告">公告</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/7.21%E9%9A%8F%E7%AC%94/" title="7.21随笔">7.21随笔</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 小陆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

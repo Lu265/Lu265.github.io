@@ -1,32 +1,176 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>7.21随笔 | 小陆的半亩方塘</title><meta name="author" content="小陆"><meta name="copyright" content="小陆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="不可以偷看别人的日记哦！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.21随笔">
+<meta property="og:url" content="http://example.com/2023/07/21/7.21%E9%9A%8F%E7%AC%94/index.html">
+<meta property="og:site_name" content="小陆的半亩方塘">
+<meta property="og:description" content="不可以偷看别人的日记哦！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-07-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-22T07:50:40.442Z">
+<meta property="article:author" content="小陆">
+<meta property="article:tag" content="日记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/07/21/7.21%E9%9A%8F%E7%AC%94/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '7.21随笔',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-22 15:50:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="小陆的半亩方塘"><span class="site-name">小陆的半亩方塘</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">7.21随笔</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-22T07:50:40.442Z" title="更新于 2023-07-22 15:50:40">2023-07-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="7.21随笔"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就你小子想偷看我日记是吧！" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="de668a34bb0d87d839a35e35f48edc7991ad727b1fdc2a15e75416ae0e35d2c3">4630436162ade97ba2718b7d0c4b3b63fffbf47e668bb8f3600bb5cef256eaa9fe44b6e353a4baa344df8573eeb0383b47fb96045811e86355473373fa2e47e0a0ec119999faeafc414b74efff89dfdb73e51aafce10d80e116fecc2b9d6016eba1cc4fb271d0d0bb23d9cc91f48393923d95d63972f9ae372a0ddfa442745b7ecc043415c43a0e72335a79c00ff77829d4abb30618e7a1aa52c188bce7764418f8150daf4882719a078a01eab96e4d4beed07680456152a4cc3c342e2a9860a723b1d067b1500d5678e4563a5389b62d9bacbbe96ed9801d21bf42e104cb5012815724217802bfd11bc02e5b4de80618e5541f496c75010dff858960f342c3474c2a01b94ae9bd43e4a501d69aeb4f39ee756331a1d742dbeb4788401938a96a48006cb29c975aeb9a6c0439a85ac5d40a2b2d24fa9c97db32f4a237756bfc9c3e2257bdb0748281d1aa99280175ae45d59f6ec4ff0203ab807e65f1b46d3a52367517144cb47b8adccd652e532410dea58fce54b2b1f15e1b7dc29967c24f70bc71db08dd98eaa908eedfca46861fff2d1fe688169499fa2159a757cc878f2aa936b73cd21c0565f588864e60d19fa137882d624b298e30e260d6651b66b4867873b4179ae18c35334ee703ab1b403158e6662eefe003f6d00515b8ce57b7129cf0db24d57ed5ed53a173d1492754f6da45d6361f6a5605126a5f5bc4810f2dab592cb5734667172821e21cfe383ff57385c97ce34370efe8d5383fb819da894b2f6c6e89d8393de7b4b8cccb47dffa765a38b6d08522ce6b0b30d4ec160f6c83979e399b936811b7f630907ae6886024aa045187ac4e0297b20bb57634a4967f9bb9b147689bdcc6b33e8510f4e76b06bca1aee2c607c0a3957e614f58dcb28b00132fd3a9786462b05cd9095e1a02d33b9afff9b9ebbb5e220dedda2df0035115f430ffc5b2199b120beb003c8a8a06965dc233178bc8e55bdad9c29271ca4a504b819a79ac9342dd604ba813cdd26f1dbbb24bbce09de7e5f2a7ee8bc6bc53e274ec56674f4a0639ac24c4674bfe74c67d29a42b6a09ae3332cca83a723362ee8050bb9f343246ef53fad4890e11c0ca46fcbe52b5e407c3902243ba3e6b0f3f0b41a7637514f91d80517bfbe87e5728c5cc5ceae27457957ae34b7da8f2cf4a19e133afcd1078d8bfb95aedc41be5e204003b45d302471c6d37c824c8061a975e3316a95f7809c49c48116fe4ed3090abc3f595c3c18388751cd597a7256d4907d67f8ec1ac175927f76d06934db3dfc24b82e6b538821bff07ed80f168e4da3e9fa1b4455d565ba689e1c51824c8212f8baae95acbaacfe8c2d914ecd1d6de3327aadf83deef0d45e2f2323db8c32ea86f7ab79ebe02c13f9e5c4a82fa6332c1c8cb2793d350a764c1a4a525d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">都说别看了！还点进来！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">小陆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/21/7.21%E9%9A%8F%E7%AC%94/">http://example.com/2023/07/21/7.21%E9%9A%8F%E7%AC%94/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">小陆的半亩方塘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/21/%E5%85%AC%E5%91%8A/" title="公告"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">公告</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/20/7.20%E9%9A%8F%E7%AC%94/" title="7.20随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">7.20随笔</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/24/7.24%E9%9A%8F%E7%AC%94/" title="7.24随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-24</div><div class="title">7.24随笔</div></div></a></div><div><a href="/2023/07/23/7.23%E9%9A%8F%E7%AC%94/" title="7.23随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-23</div><div class="title">7.23随笔</div></div></a></div><div><a href="/2023/07/22/7.22%E9%9A%8F%E7%AC%94/" title="7.22随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-22</div><div class="title">7.22随笔</div></div></a></div><div><a href="/2023/07/20/7.20%E9%9A%8F%E7%AC%94/" title="7.20随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-20</div><div class="title">7.20随笔</div></div></a></div><div><a href="/2023/07/19/7.19%E9%9A%8F%E7%AC%94/" title="7.19随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-19</div><div class="title">7.19随笔</div></div></a></div><div><a href="/2023/07/18/7.18%E9%9A%8F%E7%AC%94/" title="7.18随笔"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-18</div><div class="title">7.18随笔</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小陆</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content toc-div-class" style="display:none"></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/24/7.24%E9%9A%8F%E7%AC%94/" title="7.24随笔">7.24随笔</a><time datetime="2023-07-23T16:00:00.000Z" title="发表于 2023-07-24 00:00:00">2023-07-24</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/23/7.23%E9%9A%8F%E7%AC%94/" title="7.23随笔">7.23随笔</a><time datetime="2023-07-22T16:00:00.000Z" title="发表于 2023-07-23 00:00:00">2023-07-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/22/7.22%E9%9A%8F%E7%AC%94/" title="7.22随笔">7.22随笔</a><time datetime="2023-07-21T16:00:00.000Z" title="发表于 2023-07-22 00:00:00">2023-07-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/%E5%85%AC%E5%91%8A/" title="公告">公告</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/7.21%E9%9A%8F%E7%AC%94/" title="7.21随笔">7.21随笔</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 小陆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
