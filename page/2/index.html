@@ -1,178 +1,1060 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小陆的半亩方塘</title><meta name="author" content="小陆"><meta name="copyright" content="小陆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="小陆的半亩方塘">
-<meta property="og:url" content="http://example.com/page/2/index.html">
-<meta property="og:site_name" content="小陆的半亩方塘">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
-<meta property="article:author" content="小陆">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '小陆的半亩方塘',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-07-24 20:24:30'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+<html lang="zh-CN">
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+
+    <head>
+      <meta charset="utf-8" />
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 小陆的半亩方塘</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
         }
-      }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover9.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">小陆的半亩方塘</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
     }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="小陆的半亩方塘"><span class="site-name">小陆的半亩方塘</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">小陆的半亩方塘</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/16/7.16%E9%9A%8F%E7%AC%94%20/" title="7.16随笔">7.16随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-15T16:00:00.000Z" title="发表于 2023-07-16 00:00:00">2023-07-16</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b63c7da53b2e21fbc742f4fcb8fd6f699351950a5fa5eab37d61cc21155d0b3bd6776e987d3d69c47601f6b25a57d09d5b8a15eba2e8807828e9a7b529a3ed1fe36baba2dc820c32dcbc2823c4a6dd66dfb8d2d9f6ac37434f7945ec9f2374a3934bfafeef95ce4ff5b0a3ca10951a2cb7c86a76d24d7874d6068fcbadee78dd7a71e9ea3183bbcfad44731549c83fabb9ee9fb6496a6e8cf5903acf319bb7712146a77ca5880d667099a0ded6ca039b841484362fb83737696ee899b825121e51cbe2814f4a34828046f293e4877eb632fa0d28ca122365d0674713a4d9366496eff8dab3768a4eb2d4 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/15/7.15%E9%9A%8F%E7%AC%94/" title="7.15随笔">7.15随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-14T16:00:00.000Z" title="发表于 2023-07-15 00:00:00">2023-07-15</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b63c7da53b2e21fbc742f4fcb8fd6f69935c08bdd985f257ab42f794cf20399a3fc42e30e68fba99a7c3e1d823358c16016b46a4d7bd3ea21f4783981d043a4c7eb0b293c1dc7140c667b276d5bb73ba82071537c9b630937dc64f442968f7abc7646d616f5462b9e0df544268c99a7575910c7b47985b56482c18b6c8fe3bada3ae5302bb6f2003f7f06425844cba27bc608d6d9e3774c6b24cd68c62246f8d9f9a3f6c4ee8b1c90b745e077b2af1c0ddaa08e1fe017236174dfafb1a585820fe84196b2c8bd7c4a87f89a8d8defabcf0435c62a7eb2e892891c860f06d67826a13f08172e97d4a835a ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/14/7.14%E9%9A%8F%E7%AC%94/" title="7.14随笔">7.14随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-13T16:00:00.000Z" title="发表于 2023-07-14 00:00:00">2023-07-14</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b63c7da53b2e21fbc742f4fcb8fd6f69935de7fc3f18366df223459d13ff84115e61bf8e474d188f4510d50bf4350c34a2545bad71572505425a7ffdfba1c25a33dc78c04b70d9a346b559d003f3f19dba4c0c9ba5564068a7f6f10eec16823f85cff9999cafa0513a649c2dce9f2583fb9f1192f552cb0c39fe8a0c7fcc790f7a78b837ad63dfd490e2d492288306c51ae49ac5c8449b35483c0868ec4baf980035044d5666d8bc7844b39f839c51f0bcaa598b7c67453ca948f707e79bbec4f57d6be7df74428f8a1e2a3f3e9425ea4373ed377bdb61d6c5e3ee1b57c6823168182242f19646229b44 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/14/ESDPSO/" title="PSO学习（2）">PSO学习（2）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-13T16:00:00.000Z" title="发表于 2023-07-14 00:00:00">2023-07-14</time></span></div><div class="content">PSO的学习（２）参考文章《Evolutionary-state-driven Multi-swarm Cooperation Particle Swarm Optimization for Complex Optimization Problem》
-ESD-PSO的学习摘要ESD-PSO是基于PSO的一种变种算法，虽然PSO有很多优点，可以解决很多问题，但是PSO存在收敛过早、全局搜索能力差的缺点。为了解决这些问题，提出了进化状态驱动的多群协同粒子群优化方法（ESD-PSO），采用自适应多群协同机制（AMC）来提高所有子群之间的信息交换效率，在AMC中，将种群随机划分为多个相等的子群，并利用子群中的最佳粒子来评估其进化状态。当停滞子群达到一个阈值的时候，所有子群都会自适应地重新分组。此外，如果有一个子群长期停滞并且没有达到重组条件，则触发停滞补偿机制（SCS）来增强停滞种群多样性。生成的补偿样本帮助子群再次寻找有希望的区域。采用竞争干扰机制（CDM）来提高求解的精度。
-创新点
-自适应多群合作机制（AMC机制）
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
 
-停滞补偿策略（SCS）
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
 
-竞争干扰机制（CDM）
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-7.16随笔 "
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/16/7.16%E9%9A%8F%E7%AC%94%20/"
+    >7.16随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/16/7.16%E9%9A%8F%E7%AC%94%20/" class="article-date">
+  <time datetime="2023-07-15T16:00:00.000Z" itemprop="datePublished">2023-07-16</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/16/7.16%E9%9A%8F%E7%AC%94%20/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-7.15随笔"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/15/7.15%E9%9A%8F%E7%AC%94/"
+    >7.15随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/15/7.15%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time datetime="2023-07-14T16:00:00.000Z" itemprop="datePublished">2023-07-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/15/7.15%E9%9A%8F%E7%AC%94/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-7.14随笔"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/14/7.14%E9%9A%8F%E7%AC%94/"
+    >7.14随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/14/7.14%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time datetime="2023-07-13T16:00:00.000Z" itemprop="datePublished">2023-07-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/14/7.14%E9%9A%8F%E7%AC%94/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-ESDPSO"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/14/ESDPSO/"
+    >PSO学习（2）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/14/ESDPSO/" class="article-date">
+  <time datetime="2023-07-13T16:00:00.000Z" itemprop="datePublished">2023-07-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="PSO的学习（２）"><a href="#PSO的学习（２）" class="headerlink" title="PSO的学习（２）"></a>PSO的学习（２）</h1><p>参考文章《<strong>Evolutionary-state-driven Multi-swarm Cooperation Particle Swarm</strong> <strong>Optimization for Complex Optimization Problem</strong>》</p>
+<h2 id="ESD-PSO的学习"><a href="#ESD-PSO的学习" class="headerlink" title="ESD-PSO的学习"></a>ESD-PSO的学习</h2><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>ESD-PSO是基于PSO的一种变种算法，虽然PSO有很多优点，可以解决很多问题，但是PSO存在收敛过早、全局搜索能力差的缺点。为了解决这些问题，提出了进化状态驱动的多群协同粒子群优化方法（ESD-PSO），采用自适应多群协同机制（AMC）来提高所有子群之间的信息交换效率，在AMC中，将种群随机划分为多个相等的子群，并利用子群中的最佳粒子来评估其进化状态。当停滞子群达到一个阈值的时候，所有子群都会自适应地重新分组。此外，如果有一个子群长期停滞并且没有达到重组条件，则触发停滞补偿机制（SCS）来增强停滞种群多样性。生成的补偿样本帮助子群再次寻找有希望的区域。采用竞争干扰机制（CDM）来提高求解的精度。</p>
+<h4 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h4><ul>
+<li><p><strong>自适应多群合作机制（AMC机制）</strong></p>
+</li>
+<li><p><strong>停滞补偿策略（SCS）</strong></p>
+</li>
+<li><p><strong>竞争干扰机制（CDM）</strong></p>
+</li>
+</ul>
+<h5 id="AMC-机制"><a href="#AMC-机制" class="headerlink" title="AMC 机制"></a>AMC 机制</h5><p>在AMC中，种群被分成多个相等的亚群。亚蜂群之间的信息交换是至关重要的，因为它控制着进化的方向。然而，在进化过程中，亚群之间的信息交换过多或太少是不合适的。更多的信息交换可能会导致所有的子群过早收敛，而较少的信息交换可能会降低算法效率。在进化过程中，利用每个子群的最佳粒子来评价其进化状态。当停滞的子群的数量达到一个阈值时，它们就会被重新分组，而非停滞的子群则保持不变。AMC提高了子蜂群间的信息交换效率。</p>
+<h6 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h6><p>在最初的进化过程中，种群被随机分裂成相等的亚群，在进化过程中可以自适应地重新分组。每个子群中的最佳粒子lbestj代表第j个子群中的最佳适应度粒子。下标j表示第j个子群（j&#x3D;1-M，其中M代表子群的数量），第j个子群中的所有粒子都使用lbestj来更新其速度。具体来说，第j个子群中的第i个粒子根据其个人历史最佳解（pbesti，j）和lbestj更新其速度，如等式所示 (3).式中为第j个子群中第i个粒子的速度𝑉𝑑𝑖，𝑗，表示第i个粒子𝑋𝑑𝑖，𝑗在第j个子群中的位置。</p>
+<h6 id="算法公式"><a href="#算法公式" class="headerlink" title="算法公式"></a>算法公式<img src="D:\MyBlog\themes\ayer\source\picture\001a9ff2c3ff258923389ddec210e66.png" alt="001a9ff2c3ff258923389ddec210e66"></h6><p>其中的V代表的是速度，X代表的是位置。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\462d9a9ffb4f76abf97d00f0cfccf60.png" alt="462d9a9ffb4f76abf97d00f0cfccf60"></p>
+<p>其中lbestj(t)的变化值𝛿lbestj(t)可以用来评估进化状态。</p>
+<p><strong>情况1:𝛿lbestj&#x3D;0</strong></p>
+<p>第j代子群的最优解在第t代中没有得到𝛿𝑙𝑏𝑒𝑠𝑡𝑗的改进。虽然在这个子群中某些粒子的适应度可以得到提高，但我们只使用最佳解进行评价。如果这种情况继续下去，子群中的所有粒子都将接近局部最优，其多样性将会减少。为了防止这种现象，当lbestj无法更新时，初始值为0的停滞因子η累积为1。当η超过预设的阈值K（下面讨论）时，子群可以被评估为停滞。</p>
+<p><strong>情况2：𝛿lbestj&lt;0</strong></p>
+<p>在t代中改进了第j个子群的最优解，从而找到了一个很有前途的区域；因此，<strong>η被重置为0</strong>。在每一代中，计算所有停滞子群的数量m，并与所有子群的数量M进行比较。<strong>如果m与M的比例小于一个固定的阈值S，则大多数子群可以不断改进其最优解；</strong>因此，它们保持不变。如果这个比例超过S，则根据所有亚群的进化状态执行自适应重组策略。在这种情况下，所有停滞的亚群都被重新分组，因为它们的粒子不能根据它们的信息跳出局部最优，而其他的亚群保持不变，继续搜索有希望的区域。下面将讨论S的设置。自适应多群合作机制示意图如图所示。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\2d82f1c0c6b5f22e8e78594e54f9a6e.png" alt="2d82f1c0c6b5f22e8e78594e54f9a6e"></p>
+<h5 id="SCS机制"><a href="#SCS机制" class="headerlink" title="SCS机制"></a>SCS机制</h5><p>由上可知，如果m&#x2F;M大于S，我们将根据所有亚群的进化状态对其进行适应性重组。然而，当整个种群没有达到重组条件时，一些亚群可能会保持很长一段时间的停滞，它们的粒子在重组之前无法跳出局部最优，这浪费了计算资源。</p>
+<p>因此，当整个种群尚未达到重组条件时，一个停滞因子η大于K的亚群触发SCS，这有助于它再次寻找有希望的区域。SCS为停滞的子群构建新的学习样本，称为补偿样本，以获得更多的多样性和精英信息，并基于种群中所有粒子的优秀历史信息进行构建。</p>
+<h6 id="算法原理-1"><a href="#算法原理-1" class="headerlink" title="算法原理"></a>算法原理</h6><p>在每一代中，所有粒子的个人历史最佳解决方案（pbest）都存储在精英池E中，在每个维度中随机选择两个粒子，生成一个活力粒子e.<img src="D:\MyBlog\themes\ayer\source\picture\6b557657baf5360f8efe13531b9b6ec.png" alt="6b557657baf5360f8efe13531b9b6ec"></p>
+<p>其中E在每一代都有更新，r1和r2是区间中的随机整数[1，N].F是一个尺度因子，控制着从gbest学习的补偿样本的程度。我们可以发现，补偿样本是由gbest和精英粒子构成的。然而，在为一个停滞的子群构建补偿样本时，从精英池中随机选择的粒子可能就在该子群中。在这种情况下，需要转变策略。</p>
+<p>当构造一个补偿样本的每个维度时，会生成一个随机数。如果这超过了预设参数ρ（下面讨论），将使用等式构造相应的维度(6)，以及其他方式，如</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\c570d01480dddcd9fdfc63d6a93943c.png" alt="c570d01480dddcd9fdfc63d6a93943c"></p>
+<p>比较与lbestj的适应度，如果优于lbestj，则用lbestj代替𝑒𝑗，并将停滞因子重置为0。否则，lbestj保持𝑒𝑗不变，η减少1，使下一代能够构建活力粒子，如下：</p>
+<p>在构建补偿样本时，我们会挖掘出整个种群的优秀历史信息，以提高种群的多样性，如算法1所述。当种群处于停滞状态时，突变也可以帮助它从局部最优状态跳转。</p>
+<h5 id="CDM机制"><a href="#CDM机制" class="headerlink" title="CDM机制"></a>CDM机制</h5><p>在搜索过程中，gbest对所有粒子都有主导地位，如果它是在局部最优中，整个种群将不可避免地落入其中，导致过早的趋同。CDM帮助gbest跳出局部最优。所有粒子的历史最佳信息的平均值被定义为</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\41ff577e9ca723769f6edcb2703b848.png" alt="41ff577e9ca723769f6edcb2703b848"></p>
+<p>通过CDM，获得的突变位置如图等式所示 (10).其中r是在区间[0,1]中均匀分布的随机数。在CDM中，所有关于整个种群的历史优秀信息都被用来寻找一个有前途的区域。</p>
+<p><img src="D:\MyBlog\themes\ayer\source\picture\86eb45b834bf474037c9152353b0cbe.png" alt="86eb45b834bf474037c9152353b0cbe"></p>
+<p>进行选择操作，比较Nbest和gbest的适合度值，选择适合度较好的位置作为全局最优解。为了保存计算资源，CDM不能工作，直到经过10次连续迭代后gbest没有刷新</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-7.13随笔"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/13/7.13%E9%9A%8F%E7%AC%94/"
+    >7.13随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/13/7.13%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time datetime="2023-07-12T16:00:00.000Z" itemprop="datePublished">2023-07-13</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/13/7.13%E9%9A%8F%E7%AC%94/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-7.12随笔"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/12/7.12%E9%9A%8F%E7%AC%94/"
+    >7.12随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/12/7.12%E9%9A%8F%E7%AC%94/" class="article-date">
+  <time datetime="2023-07-12T08:54:02.000Z" itemprop="datePublished">2023-07-12</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/12/7.12%E9%9A%8F%E7%AC%94/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-我的第一篇博客"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"
+    >7.10随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2023-07-09T16:00:00.000Z" itemprop="datePublished">2023-07-10</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  不可以偷看别人的日记哦！ 
+      <a class="article-more-link" href="/2023/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-7.2随记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/02/7.2%E9%9A%8F%E8%AE%B0/"
+    >7.2随笔</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/02/7.2%E9%9A%8F%E8%AE%B0/" class="article-date">
+  <time datetime="2023-07-01T16:00:00.000Z" itemprop="datePublished">2023-07-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>7.2凌晨 2：47于张家界</p>
+<hr>
+<p>   相比于路上见到的风景，沿途遇到的形形色色的人，可能才是这趟旅途最大的收获 。<br>   在火车站等车的时候，遇到了一个蛮横无理的少年还有放纵他的母亲。我也明白了不是所有的小孩都是有基本的道德素质的。我也暗自庆幸我有一个非常好的原生家庭，我的父亲和母亲都很爱我，他们在精神上对我是富养的。<br>   从重庆到张家界没有高铁，只有绿皮火车，我好像除了记事以来坐过一次后面绿皮火车，后面就没坐过了。我妈让我试试坐绿皮火车，体验一下这种感觉。绿皮火车上就像是一个菜市场，形形色色的人，各式各样的事。火车上的嘈杂声，浓重的烟味儿，甚至是味儿很冲的零食让我刚上火车的时候有点儿“水土不服” 。我暗自庆幸和我一块儿坐的还算比较安静，至少我还能安静的熬过这六个小时。大家都很腼腆 眼里都充满了戒备。（草 大半夜的床上飞来一只蟑螂 湖南怎么也有蟑螂 不写了）<br>   （续上，实在觉得这段经历很有意义）<br>    因为一个话口，大家开始聊起天。我喜欢这种纯粹的感觉，大家可以分享自己旅途中的所见所闻，没有任何目的性，可以畅所欲言，虽然以后再也不会任何交集。有一位大姐来自德州（没记错的话，大抵是已经工作了，趁这个机会回家，她说她曾经在广西呆过几年，推荐我们去那里玩玩。还有一位姐姐在重庆读研究生，这次去长沙打工，她说她大学也是在广西读的，也推荐我们去广西玩，还让我们试试广西的辣椒拌荔枝，听着就很黑暗啊，有机会肯定会试试。还有一位姐姐也是工作了出差到重庆，来张家界玩的，她说她本科学的是生物，研究生读的是经管，工作找的是类似企业管理。哈哈哈哈哈是一点不相关啊。她让我在大学里面谈谈恋爱，以后就没时间了。哎。我则是谈了一些我旅游路上的见闻，谈谈接下来的路线。真是一段令人难忘的经历。我大抵应该是个i人的，但是有些时候又好像很社牛，和所有人都可以很快的变熟络起来。<br>   睡醒了 又梦到你了 梦里还是会心动 醒来时一阵彷徨 真希望这不是梦。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-长沙行"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/"
+    >长沙</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/" class="article-date">
+  <time datetime="2023-06-30T16:00:00.000Z" itemprop="datePublished">2023-07-01</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>哎呀，今天喝了茶叶茶，睡不着了，耳机里刚好放到黄老板的shape of you，那就写一写长沙还有桂林的游记。长沙的体验感没有张家界好，至少没有吹的那么神。因为去张家界的时候绿皮火车没有想象中的那么差劲，所以从张家界去长沙的交通方式选的也是绿皮火车，时间稍微长一点，但是大学生最不缺的就是时间，便宜下来可以便宜个百来块。但是体验确实没有第一次坐绿皮火车那么好了。我到现在还是不理解的是为什么火车上要设置吸烟区，还有那些烟民少抽一口会死吗。很讨厌抽烟的人，特别是在公共场合抽烟的人。我那个位置刚好在抽烟区旁边，让我抽二手烟还不如杀了我。抽了快六个小时的二手烟？（具体时间有点忘记了，反正挺久），终于下车了，在凌晨一点钟到了长沙。说实话下火车以后让我感到了这座城市深深的恶意。只因为我们是外地人，只因为看上去是个大学生，司机就可以狮子大开口。我实在是想不通三公里的出租车要收三十块，而且是外面的统一价，所有人都说是三十块钱。我和pyc实在受不了这样的愚弄，叫了一辆网约车。差不多十来块吧，司机师傅告诉我们晚上那些拉客的出租车连表都不打，收费是高一点，他不想像他们那样，就直接走平台拉单子。本来是打算在网吧糊弄一晚上，毕竟到的时候都凌晨一点了。pyc后面又说住个酒店好了。到酒店洗了个澡就差不多睡了。</p>
+<p>第二天才是真的折磨。去了橘子洲头，见了青年时期的毛爷爷。是真的很热。总共三公里的路，四十度的高温，走三公里，是真的很折磨。本来以为走个一两公里就可以看到。万万没想到的是它那个景区设计是便便形状的，一整条，必须要走到底才可以见到毛爷爷。pyc一路上都叫苦不迭，鉴于一些特殊原因，我俩不想让这个景区赚一分钱。所以没坐那个车。具体什么原因想不起来了。哦哦，是长沙不喜欢在公共场合开空调！很离谱，真的很离谱。四十度的高温，连高铁站都不开空调，只愿意放一些大冰块。我寻思隔壁的张家界也能开，为什么在公共场合开空调这么难呢。然后那个车不愿意坐大抵是前面有张家界做对比，那个橘子洲头景区不收费，但是那个观光车要收费，价格学生票大概二十块好像，但是咱俩当时就是不想让这个空调舍不得开，专宰外地人的城市挣钱。哈哈，现在想想还挺好笑的。pyc走了一路抱怨了一路，后面我说今天晚上的KFC我请客，才消停一点。一个便便走到头三公里，走回来又是三公里，总共六公里，四十度的高温，实在是有些折磨。后面真的只看了一眼毛爷爷，拍了一张照片就走了。哦哦，突然想起来一个小插曲，挺有意思。因为我的短袖都在学校，导致我家里没啥短袖可以带的。那天穿的是高中时的校服，pyc说我嫩起来了，哈哈哈。</p>
+<p>物价也没有这么透明，第一天去的小吃街就有点刺客。一小盒无骨鸡爪要了我四十大洋，还有那个章鱼小丸子也差不多三十好几，有些店甚至没有明码标价。导致在长沙的几餐饭吃的是KFC，那两天KFC搞活动，一个全家桶五十，很赚。还是有点小遗憾，没有吃到长沙的臭豆腐。</p>
+<p>唯一让我对长沙稍微印象好一点的就是茶颜悦色。之前一直觉得吹的再牛不过也是奶茶罢了，能有多好喝。挖草，第一口喝下去，飘飘欲仙，整个人好像飘起来了。如果人间有仙酿，那一定是茶颜悦色。买之前那个工作人员有一小杯的试喝。那一口下去，在我心中直接封神，什么古茗什么奈雪什么喜茶还有什么一点点什么茶百道，统统逊色了不止一点两点。两天一共喝了两杯，每一杯都很好喝。可是他还有好多我没有尝试，如果还有下次的长沙行，那我一定是为了茶颜悦色！！！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-张家界游记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/06/30/%E5%BC%A0%E5%AE%B6%E7%95%8C%E6%B8%B8%E8%AE%B0/"
+    >张家界</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/30/%E5%BC%A0%E5%AE%B6%E7%95%8C%E6%B8%B8%E8%AE%B0/" class="article-date">
+  <time datetime="2023-06-29T16:00:00.000Z" itemprop="datePublished">2023-06-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>既然聊到这个了，那就补一补后面没来得及写的旅行日记。上次写哪来着的，好像是写到张家界，应该是张家界吧，我看看。好，就是张家界。初到张家界，就对这座城市印象很好。可能是绿皮火车上遇到的那群可爱的朋友，让我对张家界的第一印象极佳。下了绿皮火车以后就在高铁站买了去景区的车票，这个就得好好表扬一下张家界了。这么多地方游下来，张家界是对旅游的人最友好的城市，就是各方面的体系都很成熟。不会像宜昌那样对旅游的人很不友好，宜昌交通就感觉很不方便，整个城市感觉都在搞房地产，城市规划感觉也不是很合理。重庆更是不用说了，整个城市一层一层的，像我这种外乡来的而且方向感不好的就很容易迷失。相比之下，张家界就做的很好，有高铁站直达景区的客车，然后景区内的大巴也是免费的，只要购买一张门票就够了（这点真的很赞，比某些门票免费，景区大巴收费离谱的景区不知道好多少）。来到景区的民宿，房东阿姨也真的很友好，给了我们一张手绘的地图，很热情的说有什么需要帮忙的就尽管问。一晚上好像只要120块，这个价格在景区旁边真的感觉很便宜。山脚下的物价也是平价的，和外面一致，我觉得真的很难得。房间很干净，可以看的出有认真打扫，（虽然半夜醒来的时候有蟑螂，但是我觉得这种山沟沟底下有几只蟑螂倒也正常）。最想分享的是晚上吃饭的地方，我和pyc两个人点了三个锅，这个分量足足够四个人吃，所以说旅游最好还是四个人去。点了个腊猪脚，还有一个菌菇炒猪肉，还有一个啥来着，我翻翻照片，哦，没有三个锅，就俩锅。那个猪肉巨好吃，炒那个菌菇，哎呀，写着写着口水就流下来了。我超爱那个菌菇炒猪肉，真的好香。pyc倒是更喜欢那个腊猪脚，我大抵有点吃不惯，不过味道也还可以，我可能不大喜欢腊肉里面的烟熏味。老板娘真的很热情，上来就给我们送了一瓶米酒，那个冰米酒的味道真的超级好，还问我们觉得口味合不合适。真的服务很到位，开始的时候看我们从外地来的就询问我们可不可以吃辣，然后做出来的也很符合我们的口味。有这样的老板娘这家店的生意真的很难差。吃到后面吃的很撑很撑，稍微剩了一点，也不算特别浪费，毕竟点了差不多四个人的份，两百块的价格感觉也还可以接受。</p>
+<p>（续）</p>
+<p>第二天玩的是张家界森林公园，pyc没爬多久，就在小溪旁边落水了，然后湿着脚爬了一天，我真是狠狠的嘲笑他，哈哈哈哈哈哈。他一开始竟然还想让我落水，真是的，我怎么会落水呢。除去这个小插曲，在张家界的旅途是相当愉快。景区门票学生票大概是一百出头一点，加上缆车还有那个电梯，总共两百不到吧，有张学生证真好，啊啊啊啊，可以省不少钱。景区还挺大的，不过基本上有大巴接送，风景真的也很不错。我是真的很爱这种游山玩水的感觉，真的是太舒服了。唯一有点遗憾的就是没有走那个玻璃栈道，这个感觉很刺激，下次应该还会来一次，张家界真的太好了哈哈哈哈哈。晚上吃的还是同一家店，真的好热情，张家界的人民。老板娘看我们特别爱喝那个米酒，就说大众点评上帮忙评价就送一人一瓶，然后再加上原本送的一瓶，还有老客户的福利，一下子就白嫖了四瓶米酒。啊呀呀，那个米酒一点也不醉，但冰冰凉凉的很爽口，真的很解腻。第二天尝试了和昨天不一样的，也是三个锅，有点忘记了，反正分量很足。也差不多两百来块，老板娘真的很大方，228直接抹零成200，什么大格局的老板娘这么抹零的啊。虽然在张家界呆了差不多只有30个小时，不过我真的很爱这座城市。山好水好人好。下次还来！再补一条，还有一个遗憾，没吃上那里的鱼，据说是个特色，哎呀，只吃了两餐，下次吃那个鱼。</p>
+<p>差不多就这么多了，回头分组到旅游区，今天就在日记区委屈委屈你啦。哎呀，一写就好多话，今天就先写这么多。下次有时间再把长沙的还有桂林的补上！</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> 小陆
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="小陆的半亩方塘"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%9D%82%E8%AE%B0/">杂记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
-AMC 机制在AM ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/13/7.13%E9%9A%8F%E7%AC%94/" title="7.13随笔">7.13随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-12T16:00:00.000Z" title="发表于 2023-07-13 00:00:00">2023-07-13</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b63c7da53b2e21fbc742f4fcb8fd6f69935fc46e88b799ceebfcf6aa17f96d88e88f5acc9065ba7b5b2e3d963d173303c0912bed0a52f50cf8db6c48beba2d49f131d47f4ca59b17ff0d3d33e7e013fde213de178bf5f788780a2c5965e88a5d8bc738e9b4f2ccb137804c617db06a69404a3bd21661b9c6a9007e79bbe0227023930f8f229cd7d48f47ba488bb7cdafb7872d9227caa24533fb92dfb5739d6792e62da2e02744b284d1ef35bf79c21ae1b5c04f331e195a8b63142c9edfe152bdf5a000ddf2d3935ff7ded10877d7a951a5e00fdc0fae87499004a742299834df1ce138e9c9c1433e05 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/12/7.12%E9%9A%8F%E7%AC%94/" title="7.12随笔">7.12随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-12T08:54:02.000Z" title="发表于 2023-07-12 16:54:02">2023-07-12</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b637bd723daf9941f227c3af79eb0e544361810e908c63caae7e099ab4274d2c29d8911ba6d7996aebb6655c2510040bb38f0c2ff7de3428323a500f794ef11fef3dca86c2da0c32d32d341567db2c9374d9c16ca842bf4e98cf4c07c21f65df6f07c01e34c95df412645c10f17247dfce357f470b9331e60ed6d60c5536fd67179a5ed7c976e320c1a1365478681ad2c8e0f715e2790c662af1fc1b0dd81ae175113672d70965f51aa3be79117f0e0b6c21e64471f246aa8de0f710ea7f4a7811d5d1bbc1320ec15f6105d3b6e366780de922aefa465ce323493591b69333ce40da5df2ec1fef76cca6 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="7.10随笔">7.10随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-09T16:00:00.000Z" title="发表于 2023-07-10 00:00:00">2023-07-10</time></span></div><div class="content">
-  4630436162ade97ba2718b7d0c4b3b637bd723daf9941f227c3af79eb0e54436f7628c9661479ae6609c714e74bf9dabe7686ef63a615b7fc80c6ccca51a8df61bd6f7858d1b94b6e0a29165f1d95cf2491fb688cd9a2d3a609c3ec050cd801d0f08c2cc0e9e5524b8aeb193b30e313fc53a6e07b587bc874650b9ce14512e74f1dbe219f4739f1f995ff18d3d15cf957bda12747b4490c8259e821a5dc7bce52293503de9032d1df5af2789680729373570ba21d189fafc1fa961b3c4669428991149df0f1f68120dfcef5b35e18b1a10147c77f0092596c82a6d2b297f196fae7941731b7cab55a08d94d7565650a07b32e673a6aafba47 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/02/7.2%E9%9A%8F%E8%AE%B0/" title="7.2随笔">7.2随笔</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-01T16:00:00.000Z" title="发表于 2023-07-02 00:00:00">2023-07-02</time></span></div><div class="content">7.2凌晨 2：47于张家界
+    
+    
 
-   相比于路上见到的风景，沿途遇到的形形色色的人，可能才是这趟旅途最大的收获 。   在火车站等车的时候，遇到了一个蛮横无理的少年还有放纵他的母亲。我也明白了不是所有的小孩都是有基本的道德素质的。我也暗自庆幸我有一个非常好的原生家庭，我的父亲和母亲都很爱我，他们在精神上对我是富养的。   从重庆到张家界没有高铁，只有绿皮火车，我好像除了记事以来坐过一次后面绿皮火车，后面就没坐过了。我妈让我试试坐绿皮火车，体验一下这种感觉。绿皮火车上就像是一个菜市场，形形色色的人，各式各样的事。火车上的嘈杂声，浓重的烟味儿，甚至是味儿很冲的零食让我刚上火车的时候有点儿“水土不服” 。我暗自庆幸和我一块儿坐的还算比较安静，至少我还能安静的熬过这六个小时。大家都很腼腆 眼里都充满了戒备。（草 大半夜的床上飞来一只蟑螂 湖南怎么也有蟑螂 不写了）   （续上，实在觉得这段经历很有意义）    因为一个话口，大家开始聊起天。我喜欢这种纯粹的感觉，大家可以分享自己旅途中的所见所闻，没有任何目的性，可以畅所欲言，虽然以后再也不会任何交集。有一位大姐来自德州（没记错的话，大抵是已经工 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/01/%E9%95%BF%E6%B2%99%E8%A1%8C/" title="长沙">长沙</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-30T16:00:00.000Z" title="发表于 2023-07-01 00:00:00">2023-07-01</time></span></div><div class="content">哎呀，今天喝了茶叶茶，睡不着了，耳机里刚好放到黄老板的shape of you，那就写一写长沙还有桂林的游记。长沙的体验感没有张家界好，至少没有吹的那么神。因为去张家界的时候绿皮火车没有想象中的那么差劲，所以从张家界去长沙的交通方式选的也是绿皮火车，时间稍微长一点，但是大学生最不缺的就是时间，便宜下来可以便宜个百来块。但是体验确实没有第一次坐绿皮火车那么好了。我到现在还是不理解的是为什么火车上要设置吸烟区，还有那些烟民少抽一口会死吗。很讨厌抽烟的人，特别是在公共场合抽烟的人。我那个位置刚好在抽烟区旁边，让我抽二手烟还不如杀了我。抽了快六个小时的二手烟？（具体时间有点忘记了，反正挺久），终于下车了，在凌晨一点钟到了长沙。说实话下火车以后让我感到了这座城市深深的恶意。只因为我们是外地人，只因为看上去是个大学生，司机就可以狮子大开口。我实在是想不通三公里的出租车要收三十块，而且是外面的统一价，所有人都说是三十块钱。我和pyc实在受不了这样的愚弄，叫了一辆网约车。差不多十来块吧，司机师傅告诉我们晚上那些拉客的出租车连表都不打，收费是高一点，他不想像他们那样，就直接走平台拉单子。本来是打算在网吧 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/06/30/%E5%BC%A0%E5%AE%B6%E7%95%8C%E6%B8%B8%E8%AE%B0/" title="张家界">张家界</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T16:00:00.000Z" title="发表于 2023-06-30 00:00:00">2023-06-30</time></span></div><div class="content">既然聊到这个了，那就补一补后面没来得及写的旅行日记。上次写哪来着的，好像是写到张家界，应该是张家界吧，我看看。好，就是张家界。初到张家界，就对这座城市印象很好。可能是绿皮火车上遇到的那群可爱的朋友，让我对张家界的第一印象极佳。下了绿皮火车以后就在高铁站买了去景区的车票，这个就得好好表扬一下张家界了。这么多地方游下来，张家界是对旅游的人最友好的城市，就是各方面的体系都很成熟。不会像宜昌那样对旅游的人很不友好，宜昌交通就感觉很不方便，整个城市感觉都在搞房地产，城市规划感觉也不是很合理。重庆更是不用说了，整个城市一层一层的，像我这种外乡来的而且方向感不好的就很容易迷失。相比之下，张家界就做的很好，有高铁站直达景区的客车，然后景区内的大巴也是免费的，只要购买一张门票就够了（这点真的很赞，比某些门票免费，景区大巴收费离谱的景区不知道好多少）。来到景区的民宿，房东阿姨也真的很友好，给了我们一张手绘的地图，很热情的说有什么需要帮忙的就尽管问。一晚上好像只要120块，这个价格在景区旁边真的感觉很便宜。山脚下的物价也是平价的，和外面一致，我觉得真的很难得。房间很干净，可以看的出有认真打扫，（虽然半夜醒来 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小陆</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/24/7.24%E9%9A%8F%E7%AC%94/" title="7.24随笔">7.24随笔</a><time datetime="2023-07-23T16:00:00.000Z" title="发表于 2023-07-24 00:00:00">2023-07-24</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/23/7.23%E9%9A%8F%E7%AC%94/" title="7.23随笔">7.23随笔</a><time datetime="2023-07-22T16:00:00.000Z" title="发表于 2023-07-23 00:00:00">2023-07-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/22/7.22%E9%9A%8F%E7%AC%94/" title="7.22随笔">7.22随笔</a><time datetime="2023-07-21T16:00:00.000Z" title="发表于 2023-07-22 00:00:00">2023-07-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/%E5%85%AC%E5%91%8A/" title="公告">公告</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/21/7.21%E9%9A%8F%E7%AC%94/" title="7.21随笔">7.21随笔</a><time datetime="2023-07-20T16:00:00.000Z" title="发表于 2023-07-21 00:00:00">2023-07-21</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">学习</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 1.5em; color: #99a9bf">日记</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">杂记</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">19</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-07-24T12:24:29.992Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 小陆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  </div>
+</body>
+
+</html>
